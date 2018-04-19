@@ -11,11 +11,13 @@ public class Ball : MonoBehaviour {
 	private Rigidbody2D rigi;
 
 	private void Awake(){
+		// allows us to use the rigidbody compnent without having to use the GetCompenent method every time
 		rigi = GetComponent<Rigidbody2D>(); 
 	}
 
 	// Use this for initialization
 	void Start () {
+		// grabs the paddle object
 		paddle = GameObject.FindObjectOfType<Paddle>();
 		// Ties the ball's position to the paddle's vector position
 		paddleToBallVector = this.transform.position - paddle.transform.position;
@@ -37,10 +39,14 @@ public class Ball : MonoBehaviour {
 			}	
 		}
 	void OnCollisionEnter2D (Collision2D collision){
+		// defines adjustment to ball's speed using a random float beteen 0 and 0.2 to so that the game isnt always at the same boring speed
+		Vector2 tweak = new Vector2 (Random.Range(0f,0.2f), Random.Range(0f,0.2f));
+		
 		if(hasStarted){
-
+			// doesnt allow the ball bounce to play if it hits a crackable brick only on 1 hits, paddle, and walls
 			if(!collision.gameObject.GetComponent<Brick>() || !collision.gameObject.GetComponent<Brick>().isBreakable){
         			AudioSource.PlayClipAtPoint(bounce, transform.position,0.4f);
+					rigi.velocity  += tweak;
 			}
 				
 			}
