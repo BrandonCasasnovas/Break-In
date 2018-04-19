@@ -78,8 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1bdf996b575be4fbc374de40bb4f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crack: {fileID: 8300000, guid: 21f49fa0a2b7e2a4d9b9e345ba4bafa5, type: 3}
   hitSprites:
   - {fileID: 21300024, guid: 396820e8f503c8b43a92e3455e7f5e06, type: 3}
+  isBreakable: 0
 --- !u!212 &212132684143834480
 SpriteRenderer:
   m_ObjectHideFlags: 1

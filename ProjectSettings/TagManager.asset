@@ -6,6 +6,7 @@ TagManager:
   tags:
   - playerBall
   - Breakable
+  - unbreakable
   layers:
   - Default
   - TransparentFX

@@ -156,6 +156,10 @@ Prefab:
       propertyPath: m_Name
       value: Yellow (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1041124547683882, guid: 1bae4d9a657ab4a4cb60c5a22b9f26c6, type: 2}
+      propertyPath: m_TagString
+      value: Breakable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bae4d9a657ab4a4cb60c5a22b9f26c6, type: 2}
   m_IsPrefabParent: 0

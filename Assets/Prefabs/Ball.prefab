@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20bdf8eec687d943a1632e828a4a6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounce: {fileID: 8300000, guid: 221ccd042b199d449aa0f2b547ac280e, type: 3}
   hasStarted: 0
 --- !u!212 &212475325748287700
 SpriteRenderer:

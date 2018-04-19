@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour {
+
+	public AudioClip bounce;
 	private Paddle paddle;
 	private Vector3 paddleToBallVector; 
 	public bool hasStarted = false;
@@ -35,9 +37,13 @@ public class Ball : MonoBehaviour {
 			}	
 		}
 	void OnCollisionEnter2D (Collision2D collision){
-		AudioSource audio = GetComponent<AudioSource>();
 		if(hasStarted){
-		audio.Play();
-		}
+
+			if(!collision.gameObject.GetComponent<Brick>() || !collision.gameObject.GetComponent<Brick>().isBreakable){
+        			AudioSource.PlayClipAtPoint(bounce, transform.position,0.4f);
+			}
+				
+			}
+				
 	}
 }
